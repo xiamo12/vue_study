@@ -9,13 +9,20 @@
 </head>
 <body>
 	<div id="comm"><!-- 一个Vue实例对象对应一个挂载点 -->
-		<div v-text="word">v-text指令</div><!-- 使div输出文本内容 -->
-		<div v-html="docum">v-html</div><!-- 使div输出html内容 -->
-		<div v-on:click="warning">点击警告</div><!-- 在div上绑定事件 -->
-		<div v-bind:class="class1">{{content}}</div><!-- v-bind在div上绑定属性,可简写为":" -->
-		<div :title="title">title</div><!-- v-bind简写 -->
-		<input type="text" v-model="some"><!-- v-model双向数据绑定，绑定下面含有{{content}}数据的div-->
+		<div v-text="word">v-text指令</div>
+		<!-- v-text使div输出文本内容⬆️-->
+		<div v-html="docum">v-html</div>
+		<!-- v-html使div输出html内容⬆️-->
+		<div v-on:click="warning">点击警告</div>
+		<!-- 在div上绑定事件⬆️-->
+		<div v-bind:class="class1">{{content}}</div>
+		<!-- v-bind在div上绑定属性,可简写为":"⬆️-->
+		<div :title="title">title</div>
+		<!-- v-bind简写为":"⬆️-->
+		<input type="text" v-model="some">
+		<!-- v-model双向数据绑定，绑定下面含有{{content}}数据的div⬆️-->
 		<div>{{some}}</div>
+		<!-- {{}}输出对象属性和函数值⬆️ -->
 	</div>
 	<div id="root"><!-- 第二个Vue实例对象对应其挂载点 -->
 		<div :title="title+'你好'">hello world</div>
