@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>VUE学习</title>
+	<title>属性绑定和双向数据绑定</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="vue_study.css">
-	<script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
-	
+	<script type="text/javascript" src="vue.min.js"></script>
+	<!-- 放在head标签里引入vue文件⬆️-->
 </head>
 <body>
-	<div id="app">
-		<input type="checkbox" id="btn1" v-model="use">
-		<div v-bind:class="{'class1':use}">橙子🍎</div>
+	<div id="comm"><!-- 一个Vue实例对象对应一个挂载点 -->
+		<div v-text="word">v-text指令</div><!-- 使div输出文本内容 -->
+		<div v-html="docum">v-html</div><!-- 使div输出html内容 -->
+		<div v-on:click="warning">点击警告</div><!-- 在div上绑定事件 -->
+		<div v-bind:class="class1">{{content}}</div><!-- v-bind在div上绑定属性,可简写为":" -->
+		<div :title="title">title</div><!-- v-bind简写 -->
+		<input type="text" v-model="some"><!-- v-model双向数据绑定，绑定下面含有{{content}}数据的div-->
+		<div>{{some}}</div>
 	</div>
-<script type="text/javascript" src="vue-v-input与v-bind.js"></script>
+	<div id="root"><!-- 第二个Vue实例对象对应其挂载点 -->
+		<div :title="title+'你好'">hello world</div>
+		<input type="text" v-model:value="content">
+		<div>{{content}}</div>
+	</div>
 </body>
+	<script type="text/javascript" src="vue-v-input与v-bind.js"></script>
 </html>
