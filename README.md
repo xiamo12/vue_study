@@ -7,3 +7,4 @@ vue编程思想：当你要改变DOM节点的时候，不需要去操作DOM，�
 2019-4-12:
 vue计算属性【computed:{}】和监听器【data:{count: ,},watch:{}】
 v-if=""/v-show=""/v-for=""
+todolist功能开发，通过v-model与v-for将输入框与div联动，使input输入框里的数据经过提交能够显示在div里
