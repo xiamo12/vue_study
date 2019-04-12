@@ -18,7 +18,7 @@
 		<div v-bind:class="class1">{{content}}</div>
 		<!-- v-bind在div上绑定属性,可简写为":"⬆️-->
 		<div :title="title">title</div>
-		<!-- v-bind简写为":"⬆️-->
+		<!-- v-bind简写为":"⬆️,后面的title是一个变量，而不是字符串了-->
 		<input type="text" v-model="some">
 		<!-- v-model双向数据绑定，绑定下面含有{{content}}数据的div⬆️-->
 		<div>{{some}}</div>
@@ -29,6 +29,16 @@
 		<input type="text" v-model:value="content">
 		<div>{{content}}</div>
 	</div>
+
+	<div id="temp">
+		<label for="first">姓</label>
+		<input type="text" id="first" v-model="firstName">
+		<label for="last">名</label>
+		<input type="text" id="last" v-model="lastName">
+		<div>{{fullName}}</div>
+		<div>{{count}}</div>
+	</div>
+
 </body>
 	<script type="text/javascript" src="vue-v-input与v-bind.js"></script>
 </html>
