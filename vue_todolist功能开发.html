@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todolist功能</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="vue.min.js"></script>
+</head>
+<body>
+	<div id="root">
+		<div>
+			<input type="text" v-model="inputValue">
+			<!-- 给input输入框进行双向属性绑定⬆️ -->
+			<button @click="handleClick">提交</button>
+			<!-- 点击按钮执行handleClick函数，该函数将input框里的内容显示在下述ul列表中⬆️ -->
+			<ul>
+				<li v-for="(item,index) of list" :key="index">{{item}}</li>
+			</ul>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="vue_todolist功能开发.js"></script>
+</html>
