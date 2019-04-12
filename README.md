@@ -6,3 +6,4 @@ vue中的属性绑定和双向数据绑定【属性绑定v-bind:（可以简写�
 vue编程思想：当你要改变DOM节点的时候，不需要去操作DOM，而是去操作vue实例里的数据。
 2019-4-12:
 vue计算属性【computed:{}】和监听器【data:{count: ,},watch:{}】
+v-if=""/v-show=""/v-for=""
