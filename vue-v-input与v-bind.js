@@ -29,6 +29,10 @@ var vm3=new Vue({
 		firstName: "",
 		lastName: "",
 		count: 0,
+		show:true,
+		list:["1,2,3,4","hello","cat","你好"],
+		time: [2,2,2,33,43,],
+		me: ['htll','kus'],
 	},
 	// template:"<p>cat and dog</p>",//这里的template将覆盖原有的div子节点
 	computed:{
@@ -42,4 +46,9 @@ var vm3=new Vue({
 			this.count ++;
 		},
 	},
+	methods:{
+		handleClick: function(){
+			this.show = !this.show;
+		},
+	}
 });

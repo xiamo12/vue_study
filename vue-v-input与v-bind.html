@@ -37,7 +37,15 @@
 		<input type="text" id="last" v-model="lastName">
 		<div>{{fullName}}</div>
 		<div>{{count}}</div>
+		<div v-if="show">hello world</div>
+		<button @click="handleClick">toggle</button>
+		<ul>
+			<li v-for="(item,index) of list" :key="index">{{item}}</li>
+		</ul>
+		<div v-for="items of time">{{items}}</div>
+		<div v-for="irr of me">{{irr}}</div>
 	</div>
+
 
 </body>
 	<script type="text/javascript" src="vue-v-input与v-bind.js"></script>
