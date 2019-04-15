@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todolist组件</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="vue.min.js"></script>
+</head>
+<body>
+	<div id="root">
+		<div>
+			<input type="text" v-model="inputValue">
+			<button @click="handleSubmit">提交</button>
+		</div>
+		<ul>
+			<todo-list 
+			v-for="(item,index) of list" 
+			:key="index"
+			:content="item"
+			:index="index"
+			@delete="handleDelete">
+			<!-- 父组件监听子组件出发的click事件⬆️ -->
+			</todo-list>
+
+		</ul>
+	</div>
+</body>
+	<script type="text/javascript" src="vue-todolist组件.js"></script>
+</html>
