@@ -8,3 +8,6 @@ vue编程思想：当你要改变DOM节点的时候，不需要去操作DOM，�
 vue计算属性【computed:{}】和监听器【data:{count: ,},watch:{}】
 v-if=""/v-show=""/v-for=""
 todolist功能开发，通过v-model与v-for将输入框与div联动，使input输入框里的数据经过提交能够显示在div里
+2019-4-15
+vue.js-todolist组件实现删除功能：
+父组件监听子组件触发的事件。实现的功能：在输入框里输入数值，下方以列表形式增加对应的数值。点击某个数值，该数值被删除。
